@@ -3,6 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta name="description" content="Krishna Vamsi Merikapudi — Full Stack Developer & CSE student. Building real products with React, Node.js, and AI.">
+<meta property="og:title" content="Krishna Vamsi Merikapudi — Full Stack Developer">
+<meta property="og:description" content="CSE student building real products with React, Node.js, and AI. Check out CodeBeta and CipherSelf.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://portfolio-mkv.vercel.app/">
 <title>Krishna Vamsi Merikapudi — Full Stack Developer</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -474,6 +479,7 @@ footer {
   .btn { text-align: center; clip-path: none; }
 }
 </style>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='16' fill='%2300f5d4'/><text y='.9em' font-size='52' font-family='monospace' font-weight='bold' fill='%230a0a0f' x='50%25' text-anchor='middle' dominant-baseline='auto' dy='20'>KVM</text></svg>">
 </head>
 <body>
 
@@ -522,7 +528,7 @@ footer {
   <p class="hero-sub">
     I build things for the web. Currently in <strong>4th Semester of CSE</strong>.<br>
     Turning ideas into reality with<br>
-    <span class="typer">full stack development.</span>
+    <span class="typer" id="typer"></span>
   </p>
   <div class="hero-ctas">
     <a href="#projects" class="btn btn-p">See My Work</a>
@@ -570,6 +576,9 @@ footer {
         Outside code, you'll find me on the <strong>cricket pitch</strong>, deep in a
         <strong>video edit</strong>, or down a rabbit hole <strong>exploring something new</strong>.
         That curiosity is what keeps my projects from being boring.
+      </p>
+      <p style="margin-top:1.5rem; font-size:0.92rem; color:var(--cyan); font-family: var(--font-mono, monospace);">
+        🔨 Currently building: next hackathon project
       </p>
     </div>
   </div>
@@ -734,7 +743,11 @@ footer {
         <span class="st">Vanilla JS</span>
       </div>
       <div class="p-links">
-        <a href="#" class="p-link">
+        <a href="https://portfolio-mkv.vercel.app/" class="p-link" target="_blank">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          Live Demo
+        </a>
+        <a href="https://github.com/Krishnavamsi0018/PortfolioMKV" class="p-link" target="_blank">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
           GitHub
         </a>
@@ -821,7 +834,7 @@ footer {
       <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
       GitHub
     </a>
-    <a href="https://in.linkedin.com/in/krishna-vamsi-merikapudi-a00037375" class="sl">
+    <a href="https://in.linkedin.com/in/krishna-vamsi-merikapudi-a00037375" class="sl" target="_blank">
       <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
       LinkedIn
     </a>
@@ -839,7 +852,7 @@ footer {
 
 <!-- FOOTER -->
 <footer>
-  <span>&copy; 2025 Krishna Vamsi Merikapudi &middot; Built with curiosity</span>
+  <span id="footer-year"></span>
   <span style="color:var(--cyan)">Made in India &#127470;&#127475;</span>
 </footer>
 
@@ -989,6 +1002,59 @@ function closeMenu() {
   mobileMenu.classList.remove('open');
   document.body.style.overflow = '';
 }
+</script>
+<script>
+  document.getElementById('footer-year').innerHTML =
+    '&copy; ' + new Date().getFullYear() + ' Krishna Vamsi Merikapudi &middot; Built with curiosity';
+</script>
+
+<script>
+/* ═══════════════════════════════════
+   TYPEWRITER CYCLING EFFECT
+═══════════════════════════════════ */
+(function() {
+  const phrases = [
+    'full stack development.',
+    'AI-powered products.',
+    'hackathon-winning code.'
+  ];
+  const el = document.getElementById('typer');
+  let phraseIdx = 0;
+  let charIdx = 0;
+  let deleting = false;
+
+  // Override CSS animation — JS controls width/content now
+  el.style.animation = 'cur .8s infinite';
+  el.style.width = 'auto';
+
+  function tick() {
+    const current = phrases[phraseIdx];
+    if (!deleting) {
+      el.textContent = current.slice(0, charIdx + 1);
+      charIdx++;
+      if (charIdx >= current.length) {
+        deleting = true;
+        setTimeout(tick, 1800); // pause at full phrase
+        return;
+      }
+      setTimeout(tick, 70);
+    } else {
+      el.textContent = current.slice(0, charIdx);
+      charIdx--;
+      if (charIdx < 0) {
+        deleting = false;
+        charIdx = 0;
+        phraseIdx = (phraseIdx + 1) % phrases.length;
+        setTimeout(tick, 400); // pause before next phrase
+        return;
+      }
+      setTimeout(tick, 40);
+    }
+  }
+
+  // Start after hero animation completes
+  setTimeout(tick, 1200);
+})();
 </script>
 </body>
 </html>
