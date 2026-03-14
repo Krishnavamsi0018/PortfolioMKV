@@ -579,7 +579,7 @@ footer {
       <div class="stat-l">Semester &middot; CSE Engineering</div>
     </div>
     <div class="stat reveal d2">
-      <div class="stat-n" data-count="3" data-suffix="+">0+</div>
+      <div class="stat-n" data-count="2" data-suffix="+">0+</div>
       <div class="stat-l">Projects Shipped</div>
     </div>
     <div class="stat reveal d3">
@@ -652,23 +652,24 @@ footer {
       <span class="feat-badge">Featured</span>
       <div>
         <div class="p-num">PROJECT / 01</div>
-        <h3 class="p-title">AI Study Buddy</h3>
+        <h3 class="p-title">CodeBeta</h3>
         <p class="p-desc">
-          A web app where students paste any topic and instantly get flashcards, quizzes,
-          and summaries powered by an AI API. Built in 48 hours.
-          Helped 20+ classmates prepare for exams.
+          A gamified AI-powered coding education platform. Features XP-based progression,
+          code challenges, multi-language curriculum, and a Groq AI tutor that answers
+          doubts in real-time. Built with a secure Node.js proxy backend.
         </p>
         <div class="p-stack">
           <span class="st">HTML / CSS / JS</span>
-          <span class="st">AI API</span>
+          <span class="st">Groq AI API</span>
+          <span class="st">Node.js</span>
           <span class="st">Vercel</span>
         </div>
         <div class="p-links">
-          <a href="#" class="p-link">
+          <a href="https://code-beta-phi.vercel.app/" class="p-link" target="_blank">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
             Live Demo
           </a>
-          <a href="#" class="p-link">
+          <a href="https://github.com/Krishnavamsi0018/code-beta" class="p-link" target="_blank">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
             GitHub
           </a>
@@ -676,39 +677,43 @@ footer {
       </div>
       <div class="p-vis">
         <div class="code">
-          <div class="cm">// AI Study Buddy</div>
-          <div><span class="kw">async function</span> <span class="fn">generate</span>(topic) {</div>
-          <div>&nbsp;&nbsp;<span class="kw">const</span> res = <span class="kw">await</span> ai.ask(</div>
-          <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="st2">"Flashcards on: "</span> + topic</div>
-          <div>&nbsp;&nbsp;);</div>
-          <div>&nbsp;&nbsp;<span class="kw">return</span> res.cards;</div>
+          <div class="cm">// CodeBeta AI Tutor</div>
+          <div><span class="kw">async function</span> <span class="fn">askAI</span>(doubt) {</div>
+          <div>&nbsp;&nbsp;<span class="kw">const</span> res = <span class="kw">await</span> fetch(<span class="st2">'/api/ask'</span>, {</div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;method: <span class="st2">'POST'</span>,</div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;body: JSON.stringify({ message: doubt })</div>
+          <div>&nbsp;&nbsp;});</div>
+          <div>&nbsp;&nbsp;<span class="kw">return</span> res.json(); <span class="cm">// Groq llama3</span></div>
           <div>}</div>
           <br>
-          <div class="cm">// 20+ students helped &#10003;</div>
-          <div class="cm">// Shipped in 48 hrs &#10003;</div>
-          <div class="cm">// Live on Vercel &#10003;</div>
+          <div class="cm">// XP system &#10003;</div>
+          <div class="cm">// Code challenges &#10003;</div>
+          <div class="cm">// Multi-language &#10003;</div>
         </div>
       </div>
     </div>
 
     <div class="pc reveal d1">
       <div class="p-num">PROJECT / 02</div>
-      <h3 class="p-title">Weather Dashboard</h3>
+      <h3 class="p-title">CipherSelf</h3>
       <p class="p-desc">
-        Real-time weather app with a 7-day forecast, animated charts, and city search.
-        First experience working with a public REST API and async JavaScript.
+        India's First Personal Privacy Intelligence Platform. Detects email breaches
+        via XposedOrNot API using k-anonymity, generates a proprietary DNA Score (0–100),
+        shows dark web valuation in ₹, and runs an AI hacker simulation via Groq.
+        Built for Vibexathon 1.0.
       </p>
       <div class="p-stack">
-        <span class="st">JavaScript</span>
-        <span class="st">OpenWeather API</span>
-        <span class="st">CSS Grid</span>
+        <span class="st">React + Vite</span>
+        <span class="st">Node.js</span>
+        <span class="st">Groq AI</span>
+        <span class="st">XposedOrNot API</span>
       </div>
       <div class="p-links">
-        <a href="#" class="p-link">
+        <a href="https://cipherselfproject.vercel.app/" class="p-link" target="_blank">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
           Live Demo
         </a>
-        <a href="#" class="p-link">
+        <a href="https://github.com/Krishnavamsi0018/cipherselfproject" class="p-link" target="_blank">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
           GitHub
         </a>
@@ -738,8 +743,8 @@ footer {
 
     <div class="pc cs reveal d3">
       <div class="p-num">NEXT UP</div>
-      <div class="cs-t">Something new cooking...<br>
-        <span style="color:var(--cyan)">Watch this space.</span>
+      <div class="cs-t">Hackathon mode: ON<br>
+        <span style="color:var(--cyan)">Next project loading...</span>
       </div>
     </div>
 
